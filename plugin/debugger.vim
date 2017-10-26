@@ -118,11 +118,14 @@ endif
 
 " Load debugger.py either from the runtime directory (usually
 " /usr/local/share/vim/vim71/plugin/ if you're running Vim 7.1) or from the
-" home vim directory (usually ~/.vim/plugin/).
+" home vim directory (usually ~/.vim/plugin/) or from the
+" bundle plugin manager dir.
 if filereadable($VIMRUNTIME."/plugin/debugger.py")
   pyfile $VIMRUNTIME/plugin/debugger.py
-elseif filereadable($HOME."/.vim/bundle/php-debugger/debugger.py")
-  pyfile $HOME/.vim/bundle/php-debugger/debugger.py
+elseif filereadable($HOME."/.vim/plugin/debugger.py")
+    pyfile $HOME/.vim/plugin/debugger.py
+elseif filereadable($HOME."/.vim/bundle/php-debugger/plugin/debugger.py")
+    pyfile $HOME/.vim/bundle/php-debugger/plugin/debugger.py
 else
   call confirm('debugger.vim: Unable to find debugger.py. Place it in either your home vim directory or in the Vim runtime directory.', 'OK')
 endif
