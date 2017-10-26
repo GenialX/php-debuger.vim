@@ -31,7 +31,7 @@
 "      Version: 1.1.2
 "               Originally written by Sam Ghods <sam <at> box.net>
 "               The original script is located at:
-"				http://www.vim.org/scripts/script.php?script_id=1929
+"               http://www.vim.org/scripts/script.php?script_id=1929
 "        Usage: N.B.: For a complete tutorial on how to setup this script,
 "               please visit:
 "               http://tech.blog.box.net/2007/06/20/how-to-debug-php-with-vim-and-xdebug-on-linux/
@@ -122,13 +122,13 @@ endif
 " home vim directory (usually ~/.vim/plugin/) or from the
 " bundle plugin manager dir.
 if filereadable($VIMRUNTIME."/plugin/debugger.py")
-  pyfile $VIMRUNTIME/plugin/debugger.py
+    pyfile $VIMRUNTIME/plugin/debugger.py
 elseif filereadable($HOME."/.vim/plugin/debugger.py")
     pyfile $HOME/.vim/plugin/debugger.py
 elseif filereadable($HOME."/.vim/bundle/php-debugger.vim/plugin/debugger.py")
     pyfile $HOME/.vim/bundle/php-debugger.vim/plugin/debugger.py
 else
-  call confirm('debugger.vim: Unable to find debugger.py. Place it in either your home vim directory or in the Vim runtime directory.', 'OK')
+    call confirm('debugger.vim: Unable to find debugger.py. Place it in either your home vim directory or in the Vim runtime directory.', 'OK')
 endif
 
 map <F1> :python debugger_resize()<cr>
@@ -165,18 +165,18 @@ sign define current text=->  texthl=DbgCurrent linehl=DbgCurrent
 sign define breakpt text=B>  texthl=DbgBreakPt linehl=DbgBreakPt
 
 if !exists('g:debuggerPort')
-  let g:debuggerPort = 9000
+    let g:debuggerPort = 9000
 endif 
 if !exists('g:debuggerMaxChildren')
-  let g:debuggerMaxChildren = 32
+    let g:debuggerMaxChildren = 32
 endif
 if !exists('g:debuggerMaxData')
-  let g:debuggerMaxData = 1024
+    let g:debuggerMaxData = 1024
 endif
 if !exists('g:debuggerMaxDepth')
-  let g:debuggerMaxDepth = 1
+    let g:debuggerMaxDepth = 1
 endif
 if !exists('g:debuggerMiniBufExpl')
-  let g:debuggerMiniBufExpl = 0
+    let g:debuggerMiniBufExpl = 0
 endif
 python debugger_init(1)
