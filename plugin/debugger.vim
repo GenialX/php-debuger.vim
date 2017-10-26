@@ -2,7 +2,7 @@
 "
 " Script Info and Documentation  {{{
 "=============================================================================
-"    Copyright: Copyright (C) 2007 Sam Ghods
+"    Copyright: Copyright (C) 2017 GenialX
 "      License:	The MIT License
 "				
 "				Permission is hereby granted, free of charge, to any person obtaining
@@ -25,13 +25,13 @@
 "				SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " Name Of File: debugger.vim, debugger.py
 "  Description: remote debugger interface to DBGp protocol
-"   Maintainer: Sam Ghods <sam <at> box.net>
-"  Last Change: June 18, 2007
-"          URL: http://www.vim.org/scripts/script.php?script_id=1929
-"      Version: 1.1.1
-"               Originally written by Seung Woo Shin <segv <at> sayclub.com>
+"   Maintainer: GenialX <admin <at> ihuxu.com>
+"  Last Change: Oct 26, 2017
+"          URL: https://github.com/genialx/php-debugger.vim
+"      Version: 1.1.2
+"               Originally written by Sam Ghods <sam <at> box.net>
 "               The original script is located at:
-"				http://www.vim.org/scripts/script.php?script_id=1152
+"				http://www.vim.org/scripts/script.php?script_id=1929
 "        Usage: N.B.: For a complete tutorial on how to setup this script,
 "               please visit:
 "               http://tech.blog.box.net/2007/06/20/how-to-debug-php-with-vim-and-xdebug-on-linux/
@@ -79,7 +79,8 @@
 "
 "                 let g:debuggerMiniBufExpl = 1
 "
-"      History: 1.1.1 o Added a check so the script doesn't load if python is
+"      History: 1.1.2 o Added to load debugger.py script from vundle plugin manager
+"               1.1.1 o Added a check so the script doesn't load if python is
 "                     not compiled in. (Contributed by Lars Becker.)
 "               1.1   o Added vim variable to change port.
 "                     o You can now put debugger.py in either runtime directory
